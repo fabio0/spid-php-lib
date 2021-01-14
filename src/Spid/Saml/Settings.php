@@ -30,7 +30,8 @@ class Settings
             ]
         ],
         'idp_metadata_folder' => self::REQUIRED,
-        'accepted_clock_skew_seconds' => self::NOT_REQUIRED
+        'accepted_clock_skew_seconds' => self::NOT_REQUIRED,
+        'sp_ID' => self::NOT_REQUIRED
     ];
 
     private static $validAttributeFields = [
@@ -50,7 +51,8 @@ class Settings
         "email",
         "address",
         "expirationDate",
-        "digitalAddress"
+        "digitalAddress",
+        "parseFiscalNumber"
     ];
 
     public static function validateSettings(array $settings)

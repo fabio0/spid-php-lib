@@ -72,7 +72,7 @@ XML;
         }
         
         $entityID = htmlspecialchars($this->settings['sp_entityid'], ENT_XML1);
-        $id = preg_replace('/[^a-z0-9_-]/', '_', $entityID);
+        $id = $this->settings['sp_ID'];//preg_replace('/[^a-z0-9_-]/', '_', $entityID);
         $cert = Settings::cleanOpenSsl($this->settings['sp_cert_file']);
 
         $sloLocationArray = $this->settings['sp_singlelogoutservice'] ?? array();
